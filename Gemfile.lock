@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/CD2/cms.git
-  revision: d66ba5c5624ac0bc5fd7b21fbab65f4691f472c0
+PATH
+  remote: /home/henry/work/cd2
   specs:
     cd2_cms (0.1.0)
       carrierwave

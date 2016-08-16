@@ -1,0 +1,17 @@
+%header#header
+  #header_inner
+    #logo= image_tag Cd2Cms::Setting.get(:logo)
+    #header_content
+      #header_contact
+        .contact_item
+          %span.key Email:
+          %span.value= Cd2Cms::Setting.get :email
+        .contact_item
+          %span.key Tel:
+          %span.value= Cd2Cms::Setting.get :phone_number
+      #main_menu
+        - Cd2Cms::Page.ordered.menu_pages.each do |page|
+          - if page.home_page?
+            .menu_item= link_to page.menu_item, root_url, class: ('current' if request.path.include? page.url_alias)
+          - else
+            .menu_item= link_to page.menu_item, page, class: ('current' if request.path.include? page.url_alias)

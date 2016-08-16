@@ -18,7 +18,8 @@ gem 'fog'
 
 gem 'faker'
 
-gem 'cd2_cms', github: 'CD2/cms'
+# gem 'cd2_cms', github: 'CD2/cms'
+gem 'cd2_cms', path: '/home/henry/work/cd2'
 
 
 group :development, :test do

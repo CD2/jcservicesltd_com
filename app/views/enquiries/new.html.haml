@@ -1,0 +1,19 @@
+= @page.body
+
+= form_for @enquiry do |f|
+  
+  .errors
+    - f.object.errors.full_messages.each do |error|
+      .error= error
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.email_field :email
+  .field
+    = f.label :body, 'Message'
+    = f.text_area :body
+  .actions
+    = f.submit 'Send Enquiry'
